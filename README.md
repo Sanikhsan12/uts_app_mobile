@@ -8,8 +8,7 @@ Nrp : 15-2022-001
 
 ## Fitur Aplikasi
 
-- lorem ipsum
-- lorem ipsum
-- lorem ipsum
-- lorem ipsum
-- lorem ipsum
+- Halaman biodata, berisi biodata pengguna
+- Halaman kontak statis
+- Halaman Kalkulator
+- Halaman Berita
