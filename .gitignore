@@ -48,3 +48,5 @@ app.*.map.json
 # Environment files
 .env
 
+# Asset
+assets/file_penting
