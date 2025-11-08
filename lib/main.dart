@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import './pages/splash_screen.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
-void main() {
+void main() async {
+  // ! insialisasi dan singkronisasi tanggal
+  WidgetsFlutterBinding.ensureInitialized();
+  await initializeDateFormatting('id_ID', null);
   runApp(const MyApp());
 }
 
