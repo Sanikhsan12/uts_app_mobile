@@ -27,7 +27,7 @@ Nrp : 15-2022-001
 
 ## Integrasi API
 
-- Not exist yet
+- Open Weather API
 
 ## Dependecy
 
