@@ -1,4 +1,4 @@
-# aplikasi_uts
+# Aplikasi Uts
 
 Aplikasi UTS Pemrograman Mobile
 
@@ -6,9 +6,19 @@ Nama : Muhammad Ikhsan
 
 Nrp : 15-2022-001
 
-## Fitur Aplikasi
+## Halaman Aplikasi
 
-- Halaman biodata, berisi biodata pengguna
-- Halaman kontak statis
-- Halaman Kalkulator
-- Halaman Berita
+- Home Page : Berisi tampilan waktu dan tempat
+- Biodata Page : Berisi tampilan informasi pengguna
+- Contact Page : Berisi tampilan kontak statis yang tersedia dengan scrol behaviour
+- Calculate Page : Berisi aplikasi kalkulator simple
+- News Page : berisi tampilan beberapa berita dengan scrol behaviour
+
+## Integrasi API
+
+- Not exist yet
+
+## Dependecy
+
+- Cupertino icons
+- Crystal Navigation Bar
