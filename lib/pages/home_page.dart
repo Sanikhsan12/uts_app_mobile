@@ -65,7 +65,15 @@ class _HomePageState extends State<HomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 // ! Display Cuaca
-                builderWeatherDisplay(),
+                Container(
+                  padding: const EdgeInsets.all(20),
+                  decoration: BoxDecoration(
+                    color: Colors.white.withOpacity(0.7),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: builderWeatherDisplay(),
+                ),
+
                 const SizedBox(height: 30),
 
                 // ! Display Cuaca Dan Tanggal
