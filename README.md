@@ -10,11 +10,11 @@ Nrp : 15-2022-001
 
 - Splash Screen
 
-  <img src="https://github.com/user-attachments/assets/0fa29529-2dc1-4bde-a3ab-31f3228e4a9d" width="30%">
+  <img src="https://github.com/user-attachments/assets/0fa29529-2dc1-4bde-a3ab-31f3228e4a9d" width="10%">
 
 - Home Page : Berisi tampilan waktu dan tempat
 
-  <img src="https://github.com/user-attachments/assets/6bfd53c5-e184-4e18-a05a-a259c53f68d9" width="30%">
+  <img src="https://github.com/user-attachments/assets/6bfd53c5-e184-4e18-a05a-a259c53f68d9" width="10%">
 
 - Biodata Page : Berisi tampilan informasi pengguna
 - Contact Page : Berisi tampilan kontak statis yang tersedia dengan scrol behaviour
