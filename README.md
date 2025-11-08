@@ -27,3 +27,4 @@ Nrp : 15-2022-001
 - Cupertino icons
 - Crystal Navigation Bar
 - intl
+- Flutter Dotenv
