@@ -14,6 +14,10 @@ Nrp : 15-2022-001
 - Calculate Page : Berisi aplikasi kalkulator simple
 - News Page : berisi tampilan beberapa berita dengan scrol behaviour
 
+## Tech Stack
+
+- Flutter
+
 ## Integrasi API
 
 - Not exist yet
