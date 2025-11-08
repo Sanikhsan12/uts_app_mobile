@@ -10,7 +10,7 @@ Nrp : 15-2022-001
 
 - Splash Screen
 
-  <img src="https://github.com/user-attachments/assets/0fa29529-2dc1-4bde-a3ab-31f3228e4a9d" width="25%">5
+  <img src="https://github.com/user-attachments/assets/0fa29529-2dc1-4bde-a3ab-31f3228e4a9d" width="25%">
 
 - Home Page : Berisi tampilan waktu dan tempat
 
