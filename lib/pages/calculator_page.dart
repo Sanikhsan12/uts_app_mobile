@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const CalculatorPage());
-}
-
 class CalculatorPage extends StatelessWidget {
   const CalculatorPage({super.key});
 

@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const NewsPage());
-}
-
 class NewsPage extends StatelessWidget {
   const NewsPage({super.key});
 

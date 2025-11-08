@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const BiodataPage());
-}
-
 class BiodataPage extends StatelessWidget {
   const BiodataPage({super.key});
 

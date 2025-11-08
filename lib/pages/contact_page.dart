@@ -1,9 +1,5 @@
 import "package:flutter/material.dart";
 
-void main() {
-  runApp(const ContactPage());
-}
-
 class ContactPage extends StatelessWidget {
   const ContactPage({super.key});
 
