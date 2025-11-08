@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import './pages/splash_screen.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 void main() async {
   // ! insialisasi dan singkronisasi tanggal
   WidgetsFlutterBinding.ensureInitialized();
   await initializeDateFormatting('id_ID', null);
+  await dotenv.load(fileName: ".env");
   runApp(const MyApp());
 }
 
