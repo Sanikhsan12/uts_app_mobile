@@ -60,7 +60,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
                 const EdgeInsets.symmetric(vertical: 24.0, horizontal: 12.0),
             margin: const EdgeInsets.only(bottom: 15.0),
             decoration: BoxDecoration(
-              color: Colors.grey.withOpacity(0.2),
+              color: Colors.white.withOpacity(0.5),
               borderRadius: BorderRadius.circular(12.0),
             ),
 
@@ -108,7 +108,7 @@ class _CalculatorPageState extends State<CalculatorPage> {
               Row(
                 children: [
                   buidlButton("0"),
-                  buidlButton("."),
+                  buidlButton(".", color: Colors.cyan),
                   buidlButton("log", color: Colors.cyan),
                   buidlButton("+", color: Colors.cyan),
                 ],
