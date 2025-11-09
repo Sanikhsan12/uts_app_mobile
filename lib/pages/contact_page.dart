@@ -48,13 +48,6 @@ class ContactPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // ! Judul Halaman
-            const Text(
-              "Daftar Kontak",
-              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-            ),
-            const SizedBox(height: 16.0),
-
             // ! List Kontak
             Expanded(
               child: Container(
