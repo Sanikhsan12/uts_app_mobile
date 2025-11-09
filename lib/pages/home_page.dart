@@ -20,12 +20,12 @@ class _HomePageState extends State<HomePage> {
   int currentIndex = 0;
 
   //  ! List and auto indexing of Pages
-  final List<Widget> pages = const [
-    WeatherPage(),
-    BiodataPage(),
+  final List<Widget> pages = [
+    const WeatherPage(),
+    const BiodataPage(),
     ContactPage(),
-    CalculatorPage(),
-    NewsPage(),
+    const CalculatorPage(),
+    const NewsPage(),
   ];
 
   @override
