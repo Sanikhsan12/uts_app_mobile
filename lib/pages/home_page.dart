@@ -1,9 +1,12 @@
-import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:crystal_navigation_bar/crystal_navigation_bar.dart';
-import 'package:intl/intl.dart';
-import '../models/weather_model.dart';
-import '../services/weather_service.dart';
+
+// * Pages
+import './weather_page.dart';
+import './calculator_page.dart';
+import './contact_page.dart';
+import './biodata_page.dart';
+import 'news_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,39 +18,18 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   //  ! Variable untuk Time State
   int currentIndex = 0;
-  late DateTime now;
-  Timer? timer;
 
-  // ! Variable untuk API
-  final WeatherService weatherService = WeatherService();
-  late Future<WeatherModel?> weatherData;
-
-  // ! inisialisasi waktu
-  @override
-  void initState() {
-    super.initState();
-    now = DateTime.now();
-    timer = Timer.periodic(const Duration(seconds: 1), (Timer t) {
-      setState(() {
-        now = DateTime.now();
-      });
-    });
-    weatherData = weatherService.fetchWeather('Bandung');
-  }
-
-  // ! dispose timer
-  @override
-  void dispose() {
-    timer?.cancel();
-    super.dispose();
-  }
+  //  ! List and auto indexing of Pages
+  final List<Widget> pages = const [
+    WeatherPage(),
+    BiodataPage(),
+    ContactPage(),
+    CalculatorPage(),
+    NewsPage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
-    // ! format waktu
-    String formattedTime = DateFormat.Hms('id_ID').format(now);
-    String formattedDate = DateFormat.yMMMMEEEEd('id_ID').format(now);
-
     return Scaffold(
       // ! body config
       extendBody: true,
@@ -57,54 +39,9 @@ class _HomePageState extends State<HomePage> {
               image: AssetImage('assets/images/bg_splash.png'),
               fit: BoxFit.cover),
         ),
-
-        //! Display
-        child: SafeArea(
-          child: Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                // ! Display Cuaca
-                Container(
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.7),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: builderWeatherDisplay(),
-                ),
-
-                const SizedBox(height: 30),
-
-                // ! Display Cuaca Dan Tanggal
-                Container(
-                  padding: const EdgeInsets.all(20),
-                  decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.7),
-                    borderRadius: BorderRadius.circular(15),
-                  ),
-                  child: Column(
-                    children: [
-                      Text(
-                        formattedTime,
-                        style: const TextStyle(
-                          fontSize: 48,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      const SizedBox(height: 10),
-                      Text(
-                        formattedDate,
-                        style: const TextStyle(
-                          fontSize: 24,
-                        ),
-                      ),
-                    ],
-                  ),
-                )
-              ],
-            ),
-          ),
+        child: IndexedStack(
+          index: currentIndex,
+          children: pages,
         ),
       ),
 
@@ -142,65 +79,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-    );
-  }
-
-  // ! Widget menampilkan data cuaca
-  Widget builderWeatherDisplay() {
-    return FutureBuilder<WeatherModel?>(
-      future: weatherData,
-      builder: (context, snapshot) {
-        if (snapshot.connectionState == ConnectionState.waiting) {
-          return const CircularProgressIndicator();
-        } else if (snapshot.hasError) {
-          return Container(
-            padding: const EdgeInsets.all(16),
-            decoration: BoxDecoration(
-              color: Colors.red.withOpacity(0.7),
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Text(
-              'Error: ${snapshot.error}',
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 16,
-              ),
-            ),
-          );
-        } else if (snapshot.hasData) {
-          final weather = snapshot.data!;
-          return Column(
-            children: [
-              Text(
-                weather.cityName,
-                style: const TextStyle(
-                  fontSize: 32,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              const SizedBox(height: 10),
-              Text(
-                '${weather.temperature} °C',
-                style: const TextStyle(
-                  fontSize: 28,
-                ),
-              ),
-              const SizedBox(height: 10),
-              Image.network(
-                'http://openweathermap.org/img/wn/${weather.icon}.png',
-              ),
-              const SizedBox(height: 10),
-              Text(
-                weather.weatherCondition,
-                style: const TextStyle(
-                  fontSize: 24,
-                ),
-              ),
-            ],
-          );
-        }
-        return Container();
-      },
     );
   }
 }
