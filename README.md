@@ -18,6 +18,8 @@ Nrp : 15-2022-001
 
 - Biodata Page : Berisi tampilan informasi pengguna
 
+  <img src="https://github.com/user-attachments/assets/bbe2a530-ddf2-46e3-aec7-91616f5c9de2" width="25%">
+
 - Contact Page : Berisi tampilan kontak statis yang tersedia
   dengan scrol behaviour
 
