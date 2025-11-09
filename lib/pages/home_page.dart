@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:crystal_navigation_bar/crystal_navigation_bar.dart';
 
@@ -75,7 +76,7 @@ class _HomePageState extends State<HomePage> {
             icon: Icons.calculate_outlined,
           ),
           CrystalNavigationBarItem(
-            icon: Icons.article_outlined,
+            icon: CupertinoIcons.globe,
           ),
         ],
       ),
