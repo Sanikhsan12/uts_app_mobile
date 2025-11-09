@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import '../services/news_service.dart';
 import '../models/news_model.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class NewsPage extends StatefulWidget {
   const NewsPage({super.key});
@@ -18,18 +17,6 @@ class _NewsPageState extends State<NewsPage> {
   void initState() {
     super.initState();
     _futureArticles = _newsService.fetchTopHeadlines();
-  }
-
-  // ! Launch URL
-  Future<void> _launchURL(String url) async {
-    final Uri uri = Uri.parse(url);
-    if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
-      if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(content: Text('Could not launch URL')),
-        );
-      }
-    }
   }
 
   @override
@@ -155,16 +142,10 @@ class _NewsPageState extends State<NewsPage> {
         overflow: TextOverflow.ellipsis,
       ),
       onTap: () {
-        if (articles.url.isEmpty) {
-          _launchURL(articles.url);
-        } else {
-          ScaffoldMessenger.of(context).showSnackBar(
-            const SnackBar(
-              content: Text('URL Berita tidak tersedia'),
-              backgroundColor: Colors.red,
-            ),
-          );
-        }
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(
+              content: Text('Fitur buka tautan belum diimplementasi.')),
+        );
       },
     );
   }
