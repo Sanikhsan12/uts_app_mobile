@@ -14,18 +14,18 @@ Nrp : 15-2022-001
 
 - Home Page : Berisi tampilan waktu dan tempat
 
-  <img src="https://github.com/user-attachments/assets/6bfd53c5-e184-4e18-a05a-a259c53f68d9" width="25%">
+  <img src="https://github.com/user-attachments/assets/0a401781-d273-4992-b40b-68a5760bc60d" width="25%">
 
 - Biodata Page : Berisi tampilan informasi pengguna
 
 - Contact Page : Berisi tampilan kontak statis yang tersedia
   dengan scrol behaviour
 
-  <img src="https://github.com/user-attachments/assets/c9276a74-081d-4f16-9245-5e9907a018bf" width="25%">
+  <img src="https://github.com/user-attachments/assets/acbfee2d-6dd8-4562-a853-6ec807de76d1" width="25%">
 
 - Calculate Page : Berisi aplikasi kalkulator simple
 
-  <img src="https://github.com/user-attachments/assets/d5f44418-9f2e-4d5a-8328-17ca1e94e2c5" width="25%">
+  <img src="https://github.com/user-attachments/assets/98f24765-5c3a-4ff2-bda2-6ec66471f7ea" width="25%">
 
 - News Page : berisi tampilan beberapa berita dengan scrol behaviour
 
