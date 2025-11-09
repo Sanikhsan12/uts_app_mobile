@@ -23,7 +23,7 @@ Nrp : 15-2022-001
 
 - Calculate Page : Berisi aplikasi kalkulator simple
 
-<img src="https://github.com/user-attachments/assets/d5f44418-9f2e-4d5a-8328-17ca1e94e2c5" width="25%">
+  <img src="https://github.com/user-attachments/assets/d5f44418-9f2e-4d5a-8328-17ca1e94e2c5" width="25%">
 
 - News Page : berisi tampilan beberapa berita dengan scrol behaviour
 
