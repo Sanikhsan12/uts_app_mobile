@@ -28,6 +28,16 @@ class ContactPage extends StatelessWidget {
         name: "Kevin Wang", phoneNumber: "0811-2233-4455", initials: "KW"),
     ContactModel(
         name: "Putri Lestari", phoneNumber: "0822-3344-5566", initials: "PL"),
+    ContactModel(
+        name: "Andi Pratama", phoneNumber: "0833-4455-6677", initials: "AP"),
+    ContactModel(
+        name: "Lisa Wong", phoneNumber: "0844-5566-7788", initials: "LW"),
+    ContactModel(
+        name: "Rina Sari", phoneNumber: "0855-6677-8899", initials: "RS"),
+    ContactModel(
+        name: "Tommy Nguyen", phoneNumber: "0866-7788-9900", initials: "TN"),
+    ContactModel(
+        name: "Dewi Anggraini", phoneNumber: "0877-8899-0011", initials: "DA"),
   ];
 
   @override
